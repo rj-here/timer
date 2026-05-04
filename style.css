@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(255, 219, 224);
+}
+footer {
+    background-color: rgb(255, 219, 224);
+}
+h1 {
+    color: rgb(111, 0, 18);
+    font-family: 'Arial', sans-serif;
+}
+p {
+    color: rgb(169, 0, 28);
+    font-family: 'Arial', sans-serif;
+}
+button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 10px 10px 10px;
+    font-family: 'Arial', sans-serif;
+}
