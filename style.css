@@ -19,3 +19,15 @@ button {
     padding: 10px 10px 10px 10px;
     font-family: 'Arial', sans-serif;
 }
+
+output {
+    color: rgb(111, 0, 18);
+    font-family: 'Arial', sans-serif;
+    font-size: 30px;
+}
+a {
+    color: rgb(0, 0, 0);
+    font-family: 'Arial', sans-serif;
+    text-decoration: none;
+    font-style: italic;
+}

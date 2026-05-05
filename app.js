@@ -5,9 +5,28 @@ function custom() {
     timer(totalSeconds / 60);
 }
 function timer(minutes) {
-timer = setTimeout(stop, minutes * 60 * 1000);
-document.getElementById("timer").innerHTML = "Timer set for " + minutes + " minutes.";
-//display the timer counting down on the page
+    let totalSeconds = minutes * 60;
+
+    // Clear any existing timer interval
+    if (typeof countdownInterval !== 'undefined') {
+        clearInterval(countdownInterval);
+    }
+
+    countdownInterval = setInterval(() => {
+        const mins = Math.floor(totalSeconds / 60);
+        const secs = totalSeconds % 60;
+
+        // Update the timer display
+        document.getElementById("timer").innerHTML = `Time remaining: ${mins}m ${secs}s`;
+
+        if (totalSeconds <= 0) {
+            clearInterval(countdownInterval);
+            stop();
+            document.getElementById("timer").innerHTML = "The time is up!";
+        }
+
+        totalSeconds--;
+    }, 1000);
 }
 function stop() {
 clearTimeout(timer);
